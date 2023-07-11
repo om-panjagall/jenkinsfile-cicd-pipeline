@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: DEV
     steps:
-      - users: actions/checkout@v2
+      
       - name: Run a script
         run: |
           echo "I am running a job in DEV environment"  
@@ -18,7 +18,7 @@ jobs:
     environment: PRE-PROD
     needs: DEV
     steps:
-      - users: actions/checkout@v2
+      
       - name: Run a script
         run: |
           echo "I am running a job in PRE-PROD environment"
@@ -28,7 +28,7 @@ jobs:
     environment: PROD
     needs: PRE-PROD
     steps:
-      - users: actions/checkout@v2
+      
       - name: Run a script
         run: |
           echo "I am running a job in PROD environment"
